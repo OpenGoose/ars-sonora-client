@@ -1,4 +1,3 @@
-import 'package:ars_sonora/widgets/counter.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
@@ -10,7 +9,6 @@ class SearchPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Search"),
       ),
-      body: Counter(),
     );
   }
 }
