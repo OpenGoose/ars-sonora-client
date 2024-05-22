@@ -1,3 +1,4 @@
+import 'package:ars_sonora/i18n/i18n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: Text(I18n.t("test")),
       ),
       body: ElevatedButton(
         onPressed: () {
