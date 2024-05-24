@@ -21,3 +21,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/i18n/locales/en_US/layout.json
+    - assets/i18n/locales/en_US/common.json

@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(I18n.t("test")),
+        title: Text(I18n.t(TFile.common, "test")),
       ),
       body: ElevatedButton(
         onPressed: () {
