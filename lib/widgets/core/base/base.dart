@@ -1,3 +1,5 @@
+import 'package:ars_sonora/screens/core/auth/not-authenticated.page.dart';
+import 'package:ars_sonora/widgets/core/auth/auth-component-middleware.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
@@ -26,8 +28,14 @@ class Base extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: _router,
-    );
+    return AuthComponentMiddleware(
+        authenticated: MaterialApp.router(
+          routerConfig: _router,
+        ),
+        notAuthenticated: MaterialApp(
+          home: Scaffold(
+            body: NotAuthenticatedPage(),
+          ),
+        ));
   }
 }
