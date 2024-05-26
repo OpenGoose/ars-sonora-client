@@ -16,10 +16,10 @@ class NotAuthenticatedPage extends StatelessWidget {
             direction: Axis.vertical,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Column(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/branding/logo.png'),
                     width: 200,
                   ),
