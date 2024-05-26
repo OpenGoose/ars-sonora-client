@@ -8,11 +8,17 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class LoginForm extends HookWidget {
   LoginForm({super.key});
 
+  Future<void> sleepOneSecond() async {
+    await Future.delayed(Duration(seconds: 3));
+    print('Slept for 1 second');
+  }
+
   @override
   Widget build(BuildContext context) {
-    final testRequest = useQuery<int>(UseQueryOptions(queryFn: () async {
-      return await Dio().request<int>('http://localhost:5000/auth/login',
-          options: Options(method: "post"));
+    final testRequest = useQuery(UseQueryOptions(queryFn: () async {
+      await sleepOneSecond();
+      return await Dio().request<String>('https://google.com',
+          options: Options(method: "get"));
     }));
 
     print(testRequest.isLoading);
@@ -20,6 +26,7 @@ class LoginForm extends HookWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        testRequest.isLoading ? Text("loading") : Text("DONE"),
         TextField(
           decoration: InputDecoration(
               labelText:
