@@ -9,10 +9,27 @@ class NotAuthenticatedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(I18n.t(TFile.authPage, 'Title')),
-      ),
-      body: const Padding(padding: EdgeInsets.all(24), child: LoginForm()),
+      appBar: AppBar(),
+      body: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Flex(
+            direction: Axis.vertical,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image(
+                    image: AssetImage('assets/branding/logo.png'),
+                    width: 200,
+                  ),
+                  LoginForm()
+                ],
+              ),
+              Text(I18n.t(TFile.authPage, 'Message'))
+            ],
+          )),
+      resizeToAvoidBottomInset: false,
     );
   }
 }

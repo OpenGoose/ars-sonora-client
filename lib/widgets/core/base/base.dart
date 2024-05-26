@@ -33,9 +33,7 @@ class Base extends HookWidget {
           routerConfig: _router,
         ),
         notAuthenticated: const MaterialApp(
-          home: Scaffold(
-            body: NotAuthenticatedPage(),
-          ),
+          home: NotAuthenticatedPage(),
         ));
   }
 }
