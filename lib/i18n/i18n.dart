@@ -14,12 +14,13 @@ class I18n {
 
     dynamic current = tr;
     for (String key in keys) {
-      if (current is Map<String, dynamic> && current.containsKey(key)) {
+      if (current.containsKey(key)) {
         current = current[key];
       } else {
         return path;
       }
     }
+
     return current;
   }
 

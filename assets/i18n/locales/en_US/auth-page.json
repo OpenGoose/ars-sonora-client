@@ -1,3 +1,16 @@
 {
-    "Title": "Ars Sonora account"
+    "Title": "Ars Sonora account",
+    "forms": {
+        "login": {
+            "Submit": "Login",
+            "fields": {
+                "login": {
+                    "Label": "Username"
+                },
+                "password": {
+                    "Label": "Password"
+                }
+            }
+        }
+    }
 }
