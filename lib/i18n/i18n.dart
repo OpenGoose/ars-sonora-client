@@ -56,4 +56,4 @@ class I18n {
 // ignore: constant_identifier_names
 enum Language { en_US }
 
-enum TFile { common, layout }
+enum TFile { common, layout, authPage }

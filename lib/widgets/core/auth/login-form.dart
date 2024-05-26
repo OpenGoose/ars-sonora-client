@@ -7,10 +7,25 @@ class LoginForm extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const TextField(
+          decoration: InputDecoration(labelText: 'login'),
+        ),
+        const TextField(
+          decoration: InputDecoration(labelText: 'password'),
+          obscureText: true,
+        ),
+        SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(onPressed: () {}, child: const Text("Login")))
+      ]
+          .map((w) => Padding(
+                padding: const EdgeInsets.all(6),
+                child: w,
+              ))
+          .toList(),
     );
   }
 }

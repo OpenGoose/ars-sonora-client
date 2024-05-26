@@ -11,6 +11,8 @@ void main() async {
           await rootBundle.loadString('assets/i18n/locales/en_US/layout.json'),
       TFile.common:
           await rootBundle.loadString('assets/i18n/locales/en_US/common.json'),
+      TFile.authPage: await rootBundle
+          .loadString('assets/i18n/locales/en_US/auth-page.json'),
     }
   });
 

@@ -22,3 +22,4 @@ flutter:
   assets:
     - assets/i18n/locales/en_US/layout.json
     - assets/i18n/locales/en_US/common.json
+    - assets/i18n/locales/en_US/auth-page.json
